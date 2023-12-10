@@ -30,5 +30,6 @@ struct Condition: Decodable {
 struct CityWeatherModel {
     let name: String
     let imgCode: Int
-    let temperature: String
+    let temp_c: String
+    let temp_f: String
 }

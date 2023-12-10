@@ -12,6 +12,7 @@ class CityListVC: UIViewController {
     @IBOutlet weak var cityListTableView: UITableView!
     
     var getCityList = [CityWeatherModel]()
+    var isCelciusValue = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class CityListVC: UIViewController {
         cityListTableView.delegate = self
         cityListTableView.dataSource = self
         cityListTableView.register(CityListTableViewCell.nib(), forCellReuseIdentifier: CityListTableViewCell.identifier)
-
+        cityListTableView.reloadData()
     }
     
     func getWeatherImage(code: Int) -> UIImage {
@@ -62,7 +63,7 @@ extension CityListVC: UITableViewDelegate, UITableViewDataSource {
         let model = getCityList[indexPath.item]
         cell.imgIconView.image = getWeatherImage(code: model.imgCode)
         cell.lblCityName.text = model.name
-        cell.lblTemp.text = "Temperature: \(model.temperature)"
+        cell.lblTemp.text = "Temperature: \(isCelciusValue ? model.temp_c : model.temp_f)"
         return cell
     }
     

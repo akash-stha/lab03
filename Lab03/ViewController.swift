@@ -128,7 +128,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
                         self.loadingView.isHidden = true
                         self.loadingView.stopAnimating()
                         
-                        self.citiesList.append(CityWeatherModel(name: decodedData.location?.name ?? "", imgCode: decodedData.current?.condition?.code ?? 0, temperature: self.isCelsius ? self.celsius + " C" : self.fahrenheit + " F"))
+                        self.citiesList.append(CityWeatherModel(name: decodedData.location?.name ?? "", imgCode: decodedData.current?.condition?.code ?? 0, temp_c: self.celsius + " C" , temp_f: self.fahrenheit + " F"))
                     }
                 }
             } catch {
@@ -151,6 +151,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     @IBAction func btnCityAction(_ sender: UIButton) {
         let vc = UIStoryboard(name: "CityListVC", bundle: nil).instantiateViewController(withIdentifier: "CityListVC") as! CityListVC
         vc.getCityList = citiesList
+        vc.isCelciusValue = isCelsius
         let vcWithNav = UINavigationController(rootViewController: vc)
         self.present(vcWithNav, animated: true)
     }
