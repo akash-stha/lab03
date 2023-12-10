@@ -24,7 +24,9 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     var long = ""
     var celsius = ""
     var fahrenheit = ""
-    var isCelsius = true
+    var isCelsius = false
+    
+    var citiesList = [CityWeatherModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,6 +127,8 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
                         
                         self.loadingView.isHidden = true
                         self.loadingView.stopAnimating()
+                        
+                        self.citiesList.append(CityWeatherModel(name: decodedData.location?.name ?? "", imgCode: decodedData.current?.condition?.code ?? 0, temperature: self.isCelsius ? self.celsius + " C" : self.fahrenheit + " F"))
                     }
                 }
             } catch {
@@ -144,7 +148,15 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
         return URL(string: url)
     }
     
+    @IBAction func btnCityAction(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "CityListVC", bundle: nil).instantiateViewController(withIdentifier: "CityListVC") as! CityListVC
+        vc.getCityList = citiesList
+        let vcWithNav = UINavigationController(rootViewController: vc)
+        self.present(vcWithNav, animated: true)
+    }
+    
     @IBAction func tempSwitch(_ sender: UISwitch) {
+        isCelsius = !sender.isOn
         lblTemp.text = sender.isOn ? fahrenheit + " F" : celsius + " C"
     }
 }

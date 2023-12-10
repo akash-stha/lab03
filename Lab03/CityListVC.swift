@@ -11,9 +11,12 @@ class CityListVC: UIViewController {
 
     @IBOutlet weak var cityListTableView: UITableView!
     
+    var getCityList = [CityWeatherModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableConfig()
+        setupNavigationBar()
     }
 
     private func setupNavigationBar() {
@@ -29,6 +32,21 @@ class CityListVC: UIViewController {
     private func tableConfig() {
         cityListTableView.delegate = self
         cityListTableView.dataSource = self
+        cityListTableView.register(CityListTableViewCell.nib(), forCellReuseIdentifier: CityListTableViewCell.identifier)
+
+    }
+    
+    func getWeatherImage(code: Int) -> UIImage {
+        var imageCode = "sun.max.fill"
+        
+        for item in weatherIcons {
+            if item.code == code {
+                imageCode = item.text ?? ""
+                break
+            }
+        }
+        
+        return UIImage(systemName: imageCode) ?? UIImage()
     }
 
 }
@@ -36,13 +54,15 @@ class CityListVC: UIViewController {
 extension CityListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return getCityList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cityListTableView.dequeueReusableCell(withIdentifier: CityListTableViewCell.identifier, for: indexPath) as! CityListTableViewCell
-        cell.lblCityName.text = ""
-        cell.lblTemp.text = ""
+        let model = getCityList[indexPath.item]
+        cell.imgIconView.image = getWeatherImage(code: model.imgCode)
+        cell.lblCityName.text = model.name
+        cell.lblTemp.text = "Temperature: \(model.temperature)"
         return cell
     }
     

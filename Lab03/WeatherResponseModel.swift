@@ -26,3 +26,9 @@ struct Condition: Decodable {
     let text: String?
     let code: Int?
 }
+
+struct CityWeatherModel {
+    let name: String
+    let imgCode: Int
+    let temperature: String
+}
