@@ -15,6 +15,9 @@
 		384F33222B092F0300AC6163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 384F33202B092F0300AC6163 /* LaunchScreen.storyboard */; };
 		384F332A2B093AD400AC6163 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F33292B093AD400AC6163 /* Constants.swift */; };
 		384F332C2B093C0E00AC6163 /* WeatherResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384F332B2B093C0E00AC6163 /* WeatherResponseModel.swift */; };
+		3851B1842B2546EB0015BAD5 /* CityListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3851B1832B2546EB0015BAD5 /* CityListVC.storyboard */; };
+		3851B1872B2547480015BAD5 /* CityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3851B1852B2547480015BAD5 /* CityListTableViewCell.swift */; };
+		3851B1882B2547480015BAD5 /* CityListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3851B1862B2547480015BAD5 /* CityListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		384F33232B092F0300AC6163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		384F33292B093AD400AC6163 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		384F332B2B093C0E00AC6163 /* WeatherResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseModel.swift; sourceTree = "<group>"; };
+		3851B1832B2546EB0015BAD5 /* CityListVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityListVC.storyboard; sourceTree = "<group>"; };
+		3851B1852B2547480015BAD5 /* CityListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListTableViewCell.swift; sourceTree = "<group>"; };
+		3851B1862B2547480015BAD5 /* CityListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				384F332B2B093C0E00AC6163 /* WeatherResponseModel.swift */,
 				384F33292B093AD400AC6163 /* Constants.swift */,
 				384F331B2B092F0200AC6163 /* Main.storyboard */,
+				3851B1832B2546EB0015BAD5 /* CityListVC.storyboard */,
+				3851B1852B2547480015BAD5 /* CityListTableViewCell.swift */,
+				3851B1862B2547480015BAD5 /* CityListTableViewCell.xib */,
 				384F331E2B092F0300AC6163 /* Assets.xcassets */,
 				384F33202B092F0300AC6163 /* LaunchScreen.storyboard */,
 				384F33232B092F0300AC6163 /* Info.plist */,
@@ -131,8 +140,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3851B1882B2547480015BAD5 /* CityListTableViewCell.xib in Resources */,
 				384F33222B092F0300AC6163 /* LaunchScreen.storyboard in Resources */,
 				384F331F2B092F0300AC6163 /* Assets.xcassets in Resources */,
+				3851B1842B2546EB0015BAD5 /* CityListVC.storyboard in Resources */,
 				384F331D2B092F0200AC6163 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +159,7 @@
 				384F33162B092F0200AC6163 /* AppDelegate.swift in Sources */,
 				384F33182B092F0200AC6163 /* SceneDelegate.swift in Sources */,
 				384F332C2B093C0E00AC6163 /* WeatherResponseModel.swift in Sources */,
+				3851B1872B2547480015BAD5 /* CityListTableViewCell.swift in Sources */,
 				384F332A2B093AD400AC6163 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
