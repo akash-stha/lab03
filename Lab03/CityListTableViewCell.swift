@@ -8,6 +8,12 @@
 import UIKit
 
 class CityListTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var imgIconView: UIImageView!
+    @IBOutlet weak var lblCityName: UILabel!
+    @IBOutlet weak var lblTemp: UILabel!
+    
+    static let identifier = "CityListTableViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +24,10 @@ class CityListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    static func nib() -> UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
     
 }

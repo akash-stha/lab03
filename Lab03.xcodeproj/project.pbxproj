@@ -18,6 +18,7 @@
 		3851B1842B2546EB0015BAD5 /* CityListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3851B1832B2546EB0015BAD5 /* CityListVC.storyboard */; };
 		3851B1872B2547480015BAD5 /* CityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3851B1852B2547480015BAD5 /* CityListTableViewCell.swift */; };
 		3851B1882B2547480015BAD5 /* CityListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3851B1862B2547480015BAD5 /* CityListTableViewCell.xib */; };
+		3851B18A2B2548DB0015BAD5 /* CityListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3851B1892B2548DB0015BAD5 /* CityListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3851B1832B2546EB0015BAD5 /* CityListVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityListVC.storyboard; sourceTree = "<group>"; };
 		3851B1852B2547480015BAD5 /* CityListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListTableViewCell.swift; sourceTree = "<group>"; };
 		3851B1862B2547480015BAD5 /* CityListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityListTableViewCell.xib; sourceTree = "<group>"; };
+		3851B1892B2548DB0015BAD5 /* CityListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				384F33292B093AD400AC6163 /* Constants.swift */,
 				384F331B2B092F0200AC6163 /* Main.storyboard */,
 				3851B1832B2546EB0015BAD5 /* CityListVC.storyboard */,
+				3851B1892B2548DB0015BAD5 /* CityListVC.swift */,
 				3851B1852B2547480015BAD5 /* CityListTableViewCell.swift */,
 				3851B1862B2547480015BAD5 /* CityListTableViewCell.xib */,
 				384F331E2B092F0300AC6163 /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 			files = (
 				384F331A2B092F0200AC6163 /* ViewController.swift in Sources */,
 				384F33162B092F0200AC6163 /* AppDelegate.swift in Sources */,
+				3851B18A2B2548DB0015BAD5 /* CityListVC.swift in Sources */,
 				384F33182B092F0200AC6163 /* SceneDelegate.swift in Sources */,
 				384F332C2B093C0E00AC6163 /* WeatherResponseModel.swift in Sources */,
 				3851B1872B2547480015BAD5 /* CityListTableViewCell.swift in Sources */,
